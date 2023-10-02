@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://dsv2qvocdkeek"]
+[gd_scene load_steps=10 format=3 uid="uid://dsv2qvocdkeek"]
 
 [ext_resource type="Shader" path="res://1_UV_Color.gdshader" id="1_pr5v8"]
 [ext_resource type="Texture2D" uid="uid://cd56qovg785j" path="res://icon.svg" id="2_mlpco"]
 [ext_resource type="Shader" path="res://2_animation_UV_Color.gdshader" id="3_v24fl"]
 [ext_resource type="Shader" path="res://3_radius.gdshader" id="4_u7s1m"]
+[ext_resource type="Shader" path="res://4_perlin_noise.gdshader" id="5_onfwk"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_sdulh"]
 shader = ExtResource("1_pr5v8")
@@ -13,6 +14,9 @@ shader = ExtResource("3_v24fl")
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_egdvb"]
 shader = ExtResource("4_u7s1m")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_j6f0i"]
+shader = ExtResource("5_onfwk")
 
 [node name="Node2D" type="Node2D"]
 
@@ -24,11 +28,17 @@ texture = ExtResource("2_mlpco")
 [node name="2 animation UV Color" type="Sprite2D" parent="."]
 visible = false
 material = SubResource("ShaderMaterial_518ul")
-position = Vector2(310.5, 128)
-scale = Vector2(1.49219, 1.48438)
+position = Vector2(282.5, 100.146)
+scale = Vector2(1.05469, 1.04917)
 texture = ExtResource("2_mlpco")
 
 [node name="3 Radius (errored)" type="Sprite2D" parent="."]
 material = SubResource("ShaderMaterial_egdvb")
-position = Vector2(395, 97)
+position = Vector2(440, 97)
+texture = ExtResource("2_mlpco")
+
+[node name="4 Perlin Noise" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_j6f0i")
+position = Vector2(593, 97)
 texture = ExtResource("2_mlpco")
