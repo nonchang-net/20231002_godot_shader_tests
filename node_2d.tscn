@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://dsv2qvocdkeek"]
+
+[ext_resource type="Shader" path="res://2d_test1.gdshader" id="1_utygo"]
+[ext_resource type="Texture2D" uid="uid://cd56qovg785j" path="res://icon.svg" id="2_mlpco"]
+[ext_resource type="Shader" path="res://2d_test2_anim.gdshader" id="3_ualep"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sdulh"]
+shader = ExtResource("1_utygo")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_518ul"]
+shader = ExtResource("3_ualep")
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D UI Color" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_sdulh")
+position = Vector2(120, 97)
+texture = ExtResource("2_mlpco")
+
+[node name="Sprite2D - animation UV Color" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_518ul")
+position = Vector2(310.5, 128)
+scale = Vector2(1.49219, 1.48438)
+texture = ExtResource("2_mlpco")
